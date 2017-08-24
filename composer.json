@@ -1,0 +1,16 @@
+{
+    "name": "drupal/eventbrite_api",
+    "description": "Drupal integration with the Eventbrite API",
+    "type": "module",
+    "require": {
+        "jamiehollern/eventbrite": "dev-master",
+        "drupal/key": "^1"
+    },
+    "authors": [
+        {
+            "name": "Gabriel SULLICE",
+            "email": "gabriel@sullice.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}

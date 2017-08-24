@@ -1,0 +1,18 @@
+services:
+  eventbrite_api.data_provider:
+    class: Drupal\eventbrite_api\DataProvider
+    arguments: ['@eventbrite_api.cached_http_client']
+  eventbrite_api.cached_http_client:
+    class: Drupal\eventbrite_api\Client\CachedHttpClient
+    factory: Drupal\eventbrite_api\Client\HttpClientFactory::createCachedHttpClient
+    arguments: ['@cache.eventbrite_api', '@config.factory', '@key.repository']
+  eventbrite_api.http_client:
+    class: Drupal\eventbrite_api\Client\HttpClient
+    factory: Drupal\eventbrite_api\Client\HttpClientFactory::createHttpClient
+    arguments: ['@config.factory', '@key.repository']
+  cache.eventbrite_api:
+    class: Drupal\Core\Cache\CacheBackendInterface
+    tags:
+      - { name: cache.bin }
+    factory: cache_factory:get
+    arguments: ['eventbrite_api']

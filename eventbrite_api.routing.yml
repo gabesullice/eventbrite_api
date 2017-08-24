@@ -1,0 +1,8 @@
+eventbrite_api.settings:
+  path: '/admin/config/eventbrite/api'
+  defaults:
+    _form: 'Drupal\eventbrite_api\Form\SettingsForm'
+    _title: 'Eventbrite API'
+  requirements:
+    _permission: 'administer site configuration'
+

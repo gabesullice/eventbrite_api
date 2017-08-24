@@ -1,0 +1,11 @@
+name: Eventbrite API
+description: Integration with the Eventbrite API
+package: Integrations
+
+type: module
+core: 8.x
+
+configure: eventbrite_api.settings
+
+dependencies:
+  - key:key

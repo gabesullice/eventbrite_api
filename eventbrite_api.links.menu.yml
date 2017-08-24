@@ -1,0 +1,6 @@
+eventbrite_api.settings:
+  title: 'Eventbrite API'
+  description: 'Manage settings for the Eventbrite API'
+  parent: system.admin_config
+  route_name: eventbrite_api.settings
+  weight: 100
